@@ -1,4 +1,5 @@
-streamlit
-tensorflow
-transformers
-numpy
+try:
+    from transformers import BertTokenizer, TFBertForSequenceClassification
+except Exception as e:
+    st.error(f"Error importing transformers: {e}")
+    raise
